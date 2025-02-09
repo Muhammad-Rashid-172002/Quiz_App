@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/home/Categories.dart';
+import 'package:quiz_app/login/login.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -41,25 +42,307 @@ class settingscreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      width: 100,
-      color: Colors.amber,
+    return Column(
+      children: [
+        Container(
+          decoration: BoxDecoration(
+              color: const Color.fromARGB(255, 15, 110, 189),
+              borderRadius: BorderRadius.circular(10)),
+          child: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 35, left: 10),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
+                    ),
+                    SizedBox(
+                      width: 120,
+                    ),
+                    Text(
+                      'Profile',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: Colors.white),
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(
+                height: 15,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(100),
+                child: Container(
+                  height: 100,
+                  width: 100,
+                  decoration: BoxDecoration(
+                      color: Colors.amber,
+                      borderRadius: BorderRadius.circular(100)),
+                  child: Image.asset(
+                    'assest/a.jpeg',
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
+              Text(
+                'Muhammad Rashid',
+                style: TextStyle(color: Colors.white),
+              ),
+              Text(
+                'mrashid@gamil.com',
+                style: TextStyle(color: Colors.white),
+              ),
+              SizedBox(
+                height: 15,
+              )
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Container(
+          height: 50,
+          width: 300,
+          decoration: BoxDecoration(
+              border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            children: [
+              Icon(Icons.person_2_outlined),
+              SizedBox(
+                width: 10,
+              ),
+              Text('My Profile'),
+              SizedBox(
+                width: 170,
+              ),
+              Icon(Icons.arrow_forward_ios)
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: 50,
+          width: 300,
+          decoration: BoxDecoration(
+              border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            children: [
+              Icon(Icons.task_alt_outlined),
+              SizedBox(
+                width: 10,
+              ),
+              Text('My Task'),
+              SizedBox(
+                width: 180,
+              ),
+              Icon(Icons.arrow_forward_ios)
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: 50,
+          width: 300,
+          decoration: BoxDecoration(
+              border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            children: [
+              Icon(Icons.done_all_rounded),
+              SizedBox(
+                width: 10,
+              ),
+              Text('Done Quzies'),
+              SizedBox(
+                width: 158,
+              ),
+              Icon(Icons.arrow_forward_ios)
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: 50,
+          width: 300,
+          decoration: BoxDecoration(
+              border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            children: [
+              Icon(Icons.arrow_circle_up),
+              SizedBox(
+                width: 10,
+              ),
+              Text('My Marks'),
+              SizedBox(
+                width: 176,
+              ),
+              Icon(Icons.arrow_forward_ios)
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: 50,
+          width: 300,
+          decoration: BoxDecoration(
+              border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            children: [
+              Icon(Icons.settings_outlined),
+              SizedBox(
+                width: 10,
+              ),
+              Text('Setting'),
+              SizedBox(
+                width: 188,
+              ),
+              Icon(Icons.arrow_forward_ios)
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+        Container(
+          height: 50,
+          width: 300,
+          decoration: BoxDecoration(
+              border: Border.all(), borderRadius: BorderRadius.circular(10)),
+          child: Row(
+            children: [
+              Icon(
+                Icons.logout_outlined,
+                color: Colors.green,
+              ),
+              SizedBox(
+                width: 10,
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Login()));
+                },
+                child: Text(
+                  'Log Out',
+                  style: TextStyle(color: Colors.green),
+                ),
+              ),
+              SizedBox(
+                width: 185,
+              ),
+              Icon(Icons.arrow_forward_ios)
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 10,
+        ),
+      ],
     );
   }
 }
 
 class quizscreen extends StatelessWidget {
-  const quizscreen({
+  quizscreen({
     super.key,
   });
 
+  List color = [
+    Colors.white,
+    Colors.white,
+    Colors.white,
+    Colors.white,
+    Colors.white,
+    Colors.white,
+    Colors.white,
+    Colors.white,
+    Colors.white,
+    Colors.white,
+    Colors.white,
+    Colors.white
+  ];
+  List name = [
+    'General Knowledge',
+    'Sports',
+    'Science',
+    'Politics',
+    'Art',
+    'CSS',
+    'Technology',
+    'Geography',
+    'Computer',
+    'Music',
+    'Religious',
+    'Dress',
+  ];
+  List image = [
+    'assest/4.jpg',
+    'assest/2.jpg',
+    'assest/3.png',
+    'assest/4.jpg',
+    'assest/5.png',
+    'assest/6.png',
+    'assest/7.png',
+    'assest/8.png',
+    'assest/9.png',
+    'assest/10.png',
+    'assest/11.png',
+    'assest/12.png',
+  ];
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 100,
-      width: 100,
-      color: Colors.amber,
+    return Column(
+      children: [
+        Container(
+          margin: const EdgeInsets.only(top: 40, left: 10, right: 10),
+          child: TextFormField(
+            decoration: InputDecoration(
+                prefixIcon: Icon(Icons.search),
+                hintText: 'Search Quiz',
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(20))),
+          ),
+        ),
+        Expanded(
+          child: ListView.builder(
+            itemCount: color.length,
+            itemBuilder: (context, index) {
+              return Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Container(
+                  height: 100,
+                  color: color[index],
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      Container(
+                          height: 80,
+                          width: 80,
+                          child: Image.asset(image[index])),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Text(name[index]),
+                    ],
+                  ),
+                ),
+              );
+            },
+          ),
+        )
+      ],
     );
   }
 }
