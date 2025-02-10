@@ -55,9 +55,17 @@ class _CategoriesState extends State<Categories> {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.5),
+                        spreadRadius: 5,
+                        blurRadius: 7,
+                        offset: Offset(0, 3),
+                      ),
+                    ],
                   ),
                   child: Column(
-                    children: [Image.asset('assest/2.jpg'), Text('Sport')],
+                    children: [Image.asset('assest/2.png'), Text('Sport')],
                   ),
                 ),
                 SizedBox(
@@ -68,7 +76,15 @@ class _CategoriesState extends State<Categories> {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 3),
+                        ),
+                      ]),
                   child: Column(
                     children: [Image.asset('assest/3.png'), Text('Science')],
                   ),
@@ -81,7 +97,15 @@ class _CategoriesState extends State<Categories> {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 3),
+                        ),
+                      ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -101,7 +125,15 @@ class _CategoriesState extends State<Categories> {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 3),
+                        ),
+                      ]),
                   child: Column(
                     children: [Image.asset('assest/5.png'), Text('Paint')],
                   ),
@@ -119,7 +151,15 @@ class _CategoriesState extends State<Categories> {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 3),
+                        ),
+                      ]),
                   child: Column(
                     children: [Image.asset('assest/6.png'), Text('Police')],
                   ),
@@ -132,18 +172,37 @@ class _CategoriesState extends State<Categories> {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 3),
+                        ),
+                      ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [Image.asset('assest/7.png'), Text('Geography')],
                   ),
+                ),
+                SizedBox(
+                  width: 5,
                 ),
                 Container(
                   height: 100,
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 3),
+                        ),
+                      ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [Image.asset('assest/9.png'), Text('Music')],
@@ -157,7 +216,15 @@ class _CategoriesState extends State<Categories> {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 3),
+                        ),
+                      ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [Image.asset('assest/8.png'), Text('Technology')],
@@ -179,7 +246,15 @@ class _CategoriesState extends State<Categories> {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 3),
+                        ),
+                      ]),
                   child: Column(
                     children: [Image.asset('assest/10.png'), Text('Religions')],
                   ),
@@ -192,7 +267,15 @@ class _CategoriesState extends State<Categories> {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 3),
+                        ),
+                      ]),
                   child: Column(
                     children: [Image.asset('assest/11.png'), Text('Movies')],
                   ),
@@ -205,9 +288,23 @@ class _CategoriesState extends State<Categories> {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 3),
+                        ),
+                      ]),
                   child: Column(
-                    children: [Image.asset('assest/6.png'), Text('Police')],
+                    children: [
+                      Container(
+                          height: 80,
+                          width: 80,
+                          child: Image.asset('assest/13.png')),
+                      Text('Politics')
+                    ],
                   ),
                 ),
                 SizedBox(
@@ -218,7 +315,15 @@ class _CategoriesState extends State<Categories> {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: Offset(0, 3),
+                        ),
+                      ]),
                   child: Column(
                     children: [Image.asset('assest/12.png'), Text('Fashion')],
                   ),
