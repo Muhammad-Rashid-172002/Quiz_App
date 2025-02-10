@@ -1,10 +1,7 @@
-import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:quiz_app/home/home.dart';
-import 'package:quiz_app/home/splasscreen.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -37,7 +34,7 @@ class _LoginState extends State<Login> {
       var data = jsonDecode(response.body);
 
       if (response.statusCode == 200) {
-        showSnackBar(context, '✅ Account created successfully', Colors.green);
+        showSnackBar(context, '✅ Account successfully Login', Colors.green);
 
         // Navigate to HomeScreen after success
         Future.delayed(Duration(seconds: 1), () {
@@ -147,7 +144,7 @@ class _LoginState extends State<Login> {
                 ),
                 child: Center(
                   child: Text(
-                    'Sign Up',
+                    'Login',
                     style: TextStyle(color: Colors.white, fontSize: 18),
                   ),
                 ),

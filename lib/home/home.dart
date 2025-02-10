@@ -289,7 +289,7 @@ class quizscreen extends StatelessWidget {
   ];
   List image = [
     'assest/4.jpg',
-    'assest/2.jpg',
+    'assest/2.png',
     'assest/3.png',
     'assest/4.jpg',
     'assest/5.png',
@@ -323,7 +323,12 @@ class quizscreen extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Container(
                   height: 100,
-                  color: color[index],
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black, blurRadius: 10)
+                      ],
+                      color: color[index]),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
@@ -334,7 +339,9 @@ class quizscreen extends StatelessWidget {
                       SizedBox(
                         width: 10,
                       ),
-                      Text(name[index]),
+                      Text(name[index],
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 16)),
                     ],
                   ),
                 ),
@@ -479,9 +486,16 @@ class homescreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(10),
+                    boxShadow: [BoxShadow(color: Colors.black, blurRadius: 10)],
                   ),
                   child: Column(
-                    children: [Image.asset('assest/2.jpg'), Text('Sport')],
+                    children: [
+                      Image.asset('assest/2.png'),
+                      Text(
+                        'Sport',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )
+                    ],
                   ),
                 ),
                 SizedBox(
@@ -492,9 +506,21 @@ class homescreen extends StatelessWidget {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black, blurRadius: 10)
+                      ]),
                   child: Column(
-                    children: [Image.asset('assest/3.png'), Text('Science')],
+                    children: [
+                      Container(
+                          height: 80,
+                          width: 80,
+                          child: Image.asset('assest/3.png')),
+                      Text(
+                        'Science',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )
+                    ],
                   ),
                 ),
                 SizedBox(
@@ -505,15 +531,21 @@ class homescreen extends StatelessWidget {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black, blurRadius: 10)
+                      ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset('assest/4.jpg'),
-                      SizedBox(
-                        height: 17,
-                      ),
-                      Text('History')
+                      Container(
+                          height: 80,
+                          width: 80,
+                          child: Image.asset('assest/14.png')),
+                      Text(
+                        'History',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )
                     ],
                   ),
                 ),
@@ -533,9 +565,21 @@ class homescreen extends StatelessWidget {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black, blurRadius: 10)
+                      ]),
                   child: Column(
-                    children: [Image.asset('assest/5.png'), Text('Paint')],
+                    children: [
+                      Container(
+                          height: 80,
+                          width: 80,
+                          child: Image.asset('assest/5.png')),
+                      Text(
+                        'Paint',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )
+                    ],
                   ),
                 ),
                 SizedBox(
@@ -546,9 +590,23 @@ class homescreen extends StatelessWidget {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black, blurRadius: 10)
+                      ]),
                   child: Column(
-                    children: [Image.asset('assest/6.png'), Text('Police')],
+                    children: [
+                      Container(
+                          height: 80,
+                          width: 80,
+                          child: Image.asset(
+                            'assest/13.png',
+                          )),
+                      Text(
+                        'Politics',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )
+                    ],
                   ),
                 ),
                 SizedBox(
@@ -559,10 +617,22 @@ class homescreen extends StatelessWidget {
                   width: 80,
                   decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(color: Colors.black, blurRadius: 10)
+                      ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [Image.asset('assest/7.png'), Text('Geography')],
+                    children: [
+                      Container(
+                          height: 80,
+                          width: 80,
+                          child: Image.asset('assest/7.png')),
+                      Text(
+                        'Geography',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )
+                    ],
                   ),
                 ),
               ],
@@ -585,7 +655,10 @@ class homescreen extends StatelessWidget {
               height: 70,
               width: 300,
               decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(10)),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [BoxShadow(color: Colors.black, blurRadius: 10)],
+              ),
               child: Row(
                 children: [
                   Container(
@@ -620,7 +693,10 @@ class homescreen extends StatelessWidget {
               height: 70,
               width: 300,
               decoration: BoxDecoration(
-                  color: Colors.white, borderRadius: BorderRadius.circular(10)),
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [BoxShadow(color: Colors.black, blurRadius: 10)],
+              ),
               child: Row(
                 children: [
                   Container(
