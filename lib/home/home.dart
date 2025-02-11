@@ -1,5 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_app/home/Categories.dart';
+import 'package:quiz_app/home/Quiz_Catage.dart/Quiz_1.dart';
+import 'package:quiz_app/home/Quiz_Catage.dart/Quiz_10.dart';
+import 'package:quiz_app/home/Quiz_Catage.dart/Quiz_11.dart';
+import 'package:quiz_app/home/Quiz_Catage.dart/Quiz_12.dart';
+import 'package:quiz_app/home/Quiz_Catage.dart/Quiz_2.dart';
+import 'package:quiz_app/home/Quiz_Catage.dart/Quiz_3.dart';
+import 'package:quiz_app/home/Quiz_Catage.dart/Quiz_4.dart';
+import 'package:quiz_app/home/Quiz_Catage.dart/Quiz_5.dart';
+import 'package:quiz_app/home/Quiz_Catage.dart/Quiz_6.dart';
+import 'package:quiz_app/home/Quiz_Catage.dart/Quiz_7.dart';
+import 'package:quiz_app/home/Quiz_Catage.dart/Quiz_8.dart';
+import 'package:quiz_app/home/Quiz_Catage.dart/Quiz_9.dart';
 import 'package:quiz_app/login/login.dart';
 
 class Home extends StatefulWidget {
@@ -83,7 +95,7 @@ class settingscreen extends StatelessWidget {
                       color: Colors.amber,
                       borderRadius: BorderRadius.circular(100)),
                   child: Image.asset(
-                    'assest/a.jpeg',
+                    'assets/a.jpeg',
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -259,7 +271,7 @@ class quizscreen extends StatelessWidget {
     super.key,
   });
 
-  List color = [
+  List<Color> color = [
     Colors.white,
     Colors.white,
     Colors.white,
@@ -274,32 +286,32 @@ class quizscreen extends StatelessWidget {
     Colors.white
   ];
   List name = [
-    'General Knowledge',
-    'Sports',
-    'Science',
-    'Politics',
-    'Art',
-    'CSS',
-    'Technology',
-    'Geography',
-    'Computer',
-    'Music',
-    'Religious',
-    'Dress',
+    {'title': 'General Knowledge', 'page': Quiz1()},
+    {'title': 'Sports', 'page': Quiz2()},
+    {'title': 'Science', 'page': Quiz3()},
+    {'title': 'Politics', 'page': Quiz4()},
+    {'title': 'Art', 'page': Quiz5()},
+    {'title': 'Military', 'page': Quiz6()},
+    {'title': 'Geography', 'page': Quiz7()},
+    {'title': 'Technology', 'page': Quiz8()},
+    {'title': 'Musics', 'page': Quiz9()},
+    {'title': 'Religious', 'page': Quiz10()},
+    {'title': 'Movies', 'page': Quiz11()},
+    {'title': 'Dress', 'page': Quiz12()}
   ];
   List image = [
-    'assest/4.jpg',
-    'assest/2.png',
-    'assest/3.png',
-    'assest/4.jpg',
-    'assest/5.png',
-    'assest/6.png',
-    'assest/7.png',
-    'assest/8.png',
-    'assest/9.png',
-    'assest/10.png',
-    'assest/11.png',
-    'assest/12.png',
+    'assets/4.jpg',
+    'assets/2.png',
+    'assets/3.png',
+    'assets/4.jpg',
+    'assets/5.png',
+    'assets/6.png',
+    'assets/7.png',
+    'assets/8.png',
+    'assets/9.png',
+    'assets/10.png',
+    'assets/11.png',
+    'assets/12.png',
   ];
   @override
   Widget build(BuildContext context) {
@@ -319,30 +331,43 @@ class quizscreen extends StatelessWidget {
           child: ListView.builder(
             itemCount: color.length,
             itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Container(
-                  height: 100,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(color: Colors.black, blurRadius: 10)
-                      ],
-                      color: color[index]),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                          height: 80,
-                          width: 80,
-                          child: Image.asset(image[index])),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      Text(name[index],
+              return InkWell(
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => name[index]['page']));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Container(
+                    height: 100,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(color: Colors.black, blurRadius: 10)
+                        ],
+                        color: color[index]),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                            height: 80,
+                            width: 80,
+                            child: Image.asset(
+                              image[index],
+                              fit: BoxFit.cover,
+                            )),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          name[index]['title'],
                           style: TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 16)),
-                    ],
+                              fontWeight: FontWeight.bold, fontSize: 16),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               );
@@ -385,7 +410,7 @@ class homescreen extends StatelessWidget {
                             children: [
                               ClipOval(
                                 child: Image.asset(
-                                  'assest/a.jpeg',
+                                  'assets/a.jpeg',
                                   fit: BoxFit.cover,
                                   height: 60,
                                   width: 60,
@@ -490,7 +515,7 @@ class homescreen extends StatelessWidget {
                   ),
                   child: Column(
                     children: [
-                      Image.asset('assest/2.png'),
+                      Image.asset('assets/2.png'),
                       Text(
                         'Sport',
                         style: TextStyle(fontWeight: FontWeight.bold),
@@ -515,7 +540,7 @@ class homescreen extends StatelessWidget {
                       Container(
                           height: 80,
                           width: 80,
-                          child: Image.asset('assest/3.png')),
+                          child: Image.asset('assets/3.png')),
                       Text(
                         'Science',
                         style: TextStyle(fontWeight: FontWeight.bold),
@@ -541,7 +566,7 @@ class homescreen extends StatelessWidget {
                       Container(
                           height: 80,
                           width: 80,
-                          child: Image.asset('assest/14.png')),
+                          child: Image.asset('assets/4.jpg')),
                       Text(
                         'History',
                         style: TextStyle(fontWeight: FontWeight.bold),
@@ -574,7 +599,7 @@ class homescreen extends StatelessWidget {
                       Container(
                           height: 80,
                           width: 80,
-                          child: Image.asset('assest/5.png')),
+                          child: Image.asset('assets/5.png')),
                       Text(
                         'Paint',
                         style: TextStyle(fontWeight: FontWeight.bold),
@@ -600,7 +625,7 @@ class homescreen extends StatelessWidget {
                           height: 80,
                           width: 80,
                           child: Image.asset(
-                            'assest/13.png',
+                            'assets/13.png',
                           )),
                       Text(
                         'Politics',
@@ -627,7 +652,7 @@ class homescreen extends StatelessWidget {
                       Container(
                           height: 80,
                           width: 80,
-                          child: Image.asset('assest/7.png')),
+                          child: Image.asset('assets/7.png')),
                       Text(
                         'Geography',
                         style: TextStyle(fontWeight: FontWeight.bold),
@@ -664,7 +689,7 @@ class homescreen extends StatelessWidget {
                   Container(
                       height: 100,
                       width: 70,
-                      child: Image.asset('assest/8.png')),
+                      child: Image.asset('assets/8.png')),
                   SizedBox(
                     width: 10,
                   ),
@@ -702,7 +727,7 @@ class homescreen extends StatelessWidget {
                   Container(
                       height: 100,
                       width: 70,
-                      child: Image.asset('assest/9.png')),
+                      child: Image.asset('assets/9.png')),
                   SizedBox(
                     width: 10,
                   ),

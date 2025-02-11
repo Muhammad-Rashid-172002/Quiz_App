@@ -31,7 +31,7 @@ class _SplasscreenState extends State<Splasscreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Image.asset('assest/DD.png'),
+            Image.asset('assets/DD.png'),
             SizedBox(
               height: 20,
             ),

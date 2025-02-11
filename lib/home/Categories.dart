@@ -65,7 +65,7 @@ class _CategoriesState extends State<Categories> {
                     ],
                   ),
                   child: Column(
-                    children: [Image.asset('assest/2.png'), Text('Sport')],
+                    children: [Image.asset('assets/2.png'), Text('Sport')],
                   ),
                 ),
                 SizedBox(
@@ -86,7 +86,7 @@ class _CategoriesState extends State<Categories> {
                         ),
                       ]),
                   child: Column(
-                    children: [Image.asset('assest/3.png'), Text('Science')],
+                    children: [Image.asset('assets/3.png'), Text('Science')],
                   ),
                 ),
                 SizedBox(
@@ -109,7 +109,7 @@ class _CategoriesState extends State<Categories> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Image.asset('assest/4.jpg'),
+                      Image.asset('assets/4.jpg'),
                       SizedBox(
                         height: 17,
                       ),
@@ -135,7 +135,7 @@ class _CategoriesState extends State<Categories> {
                         ),
                       ]),
                   child: Column(
-                    children: [Image.asset('assest/5.png'), Text('Paint')],
+                    children: [Image.asset('assets/5.png'), Text('Paint')],
                   ),
                 ),
               ],
@@ -161,7 +161,7 @@ class _CategoriesState extends State<Categories> {
                         ),
                       ]),
                   child: Column(
-                    children: [Image.asset('assest/6.png'), Text('Police')],
+                    children: [Image.asset('assets/6.png'), Text('Police')],
                   ),
                 ),
                 SizedBox(
@@ -183,7 +183,7 @@ class _CategoriesState extends State<Categories> {
                       ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [Image.asset('assest/7.png'), Text('Geography')],
+                    children: [Image.asset('assets/7.png'), Text('Geography')],
                   ),
                 ),
                 SizedBox(
@@ -205,7 +205,7 @@ class _CategoriesState extends State<Categories> {
                       ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [Image.asset('assest/9.png'), Text('Music')],
+                    children: [Image.asset('assets/9.png'), Text('Music')],
                   ),
                 ),
                 SizedBox(
@@ -227,7 +227,7 @@ class _CategoriesState extends State<Categories> {
                       ]),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [Image.asset('assest/8.png'), Text('Technology')],
+                    children: [Image.asset('assets/8.png'), Text('Technology')],
                   ),
                 ),
                 SizedBox(
@@ -256,7 +256,7 @@ class _CategoriesState extends State<Categories> {
                         ),
                       ]),
                   child: Column(
-                    children: [Image.asset('assest/10.png'), Text('Religions')],
+                    children: [Image.asset('assets/10.png'), Text('Religions')],
                   ),
                 ),
                 SizedBox(
@@ -277,7 +277,7 @@ class _CategoriesState extends State<Categories> {
                         ),
                       ]),
                   child: Column(
-                    children: [Image.asset('assest/11.png'), Text('Movies')],
+                    children: [Image.asset('assets/11.png'), Text('Movies')],
                   ),
                 ),
                 SizedBox(
@@ -302,7 +302,7 @@ class _CategoriesState extends State<Categories> {
                       Container(
                           height: 80,
                           width: 80,
-                          child: Image.asset('assest/13.png')),
+                          child: Image.asset('assets/13.png')),
                       Text('Politics')
                     ],
                   ),
@@ -325,7 +325,7 @@ class _CategoriesState extends State<Categories> {
                         ),
                       ]),
                   child: Column(
-                    children: [Image.asset('assest/12.png'), Text('Fashion')],
+                    children: [Image.asset('assets/12.png'), Text('Fashion')],
                   ),
                 ),
                 SizedBox(
