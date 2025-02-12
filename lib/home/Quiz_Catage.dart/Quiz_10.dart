@@ -79,25 +79,34 @@ class _Quiz10State extends State<Quiz10> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              questions[currentQuestionIndex]['question'],
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            ...(questions[currentQuestionIndex]['options'] as List<String>)
-                .map((option) => Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: ElevatedButton(
-                          onPressed: () {
-                            checkAnswer(questions[currentQuestionIndex]
-                                    ['options']
-                                .indexOf(option));
-                          },
-                          child: Text(option)),
-                    ))
-          ],
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border(),
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(color: Colors.grey, blurRadius: 10, spreadRadius: 5)
+            ],
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                questions[currentQuestionIndex]['question'],
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              ...(questions[currentQuestionIndex]['options'] as List<String>)
+                  .map((option) => Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ElevatedButton(
+                            onPressed: () {
+                              checkAnswer(questions[currentQuestionIndex]
+                                      ['options']
+                                  .indexOf(option));
+                            },
+                            child: Text(option)),
+                      ))
+            ],
+          ),
         ),
       ),
     );

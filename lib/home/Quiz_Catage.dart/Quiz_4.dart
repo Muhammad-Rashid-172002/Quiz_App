@@ -90,28 +90,37 @@ class _Quiz4State extends State<Quiz4> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              questions[currentQuestionIndex]['question'],
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
-            SizedBox(height: 20),
-            ...((questions[currentQuestionIndex]['options'] as List<String>)
-                .asMap()
-                .entries
-                .map((option) => Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: ElevatedButton(
-                        onPressed: () {
-                          checkAnswer(option.key);
-                        },
-                        child: Text(option.value),
-                      ),
-                    ))
-                .toList()),
-          ],
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border(),
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(color: Colors.grey, blurRadius: 10, spreadRadius: 5)
+            ],
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                questions[currentQuestionIndex]['question'],
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(height: 20),
+              ...((questions[currentQuestionIndex]['options'] as List<String>)
+                  .asMap()
+                  .entries
+                  .map((option) => Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ElevatedButton(
+                          onPressed: () {
+                            checkAnswer(option.key);
+                          },
+                          child: Text(option.value),
+                        ),
+                      ))
+                  .toList()),
+            ],
+          ),
         ),
       ),
     );

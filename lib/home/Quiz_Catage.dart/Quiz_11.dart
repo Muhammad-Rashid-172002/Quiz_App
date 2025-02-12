@@ -101,28 +101,38 @@ class _Quiz11State extends State<Quiz11> {
       appBar: AppBar(
         title: Text('Movie Quiz'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(height: 20),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              questions[currentQuestionIndex]['question'],
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-            ),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border(),
+            borderRadius: BorderRadius.circular(10),
+            boxShadow: [
+              BoxShadow(color: Colors.grey, blurRadius: 10, spreadRadius: 5)
+            ],
           ),
-          ...(questions[currentQuestionIndex]['options'] as List<String>)
-              .map((option) => Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: ElevatedButton(
-                        onPressed: () {
-                          checkAnswer(questions[currentQuestionIndex]['options']
-                              .indexOf(option));
-                        },
-                        child: Text(option)),
-                  ))
-        ],
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(height: 20),
+              Text(
+                questions[currentQuestionIndex]['question'],
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+              ),
+              ...(questions[currentQuestionIndex]['options'] as List<String>)
+                  .map((option) => Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: ElevatedButton(
+                            onPressed: () {
+                              checkAnswer(questions[currentQuestionIndex]
+                                      ['options']
+                                  .indexOf(option));
+                            },
+                            child: Text(option)),
+                      ))
+            ],
+          ),
+        ),
       ),
     );
   }
