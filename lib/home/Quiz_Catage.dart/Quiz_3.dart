@@ -73,43 +73,46 @@ class _Quiz3State extends State<Quiz3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueAccent,
       appBar: AppBar(
         title: Text('Science Quiz'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Container(
-          decoration: BoxDecoration(
-            border: Border(),
-            borderRadius: BorderRadius.circular(10),
-            boxShadow: [
-              BoxShadow(color: Colors.grey, blurRadius: 10, spreadRadius: 5)
-            ],
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                questions[currentQuestionIndex]['question'],
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 20),
-              ...((questions[currentQuestionIndex]['options'] as List<String>)
-                  .map((option) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ElevatedButton(
-                    onPressed: () {
-                      checkAnswer(
-                        questions[currentQuestionIndex]['options']
-                            .indexOf(option),
-                      );
-                    },
-                    child: Text(option),
-                  ),
-                );
-              }).toList()),
-            ],
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(),
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: [
+                BoxShadow(color: Colors.grey, blurRadius: 10, spreadRadius: 5)
+              ],
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  questions[currentQuestionIndex]['question'],
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                SizedBox(height: 20),
+                ...((questions[currentQuestionIndex]['options'] as List<String>)
+                    .map((option) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ElevatedButton(
+                      onPressed: () {
+                        checkAnswer(
+                          questions[currentQuestionIndex]['options']
+                              .indexOf(option),
+                        );
+                      },
+                      child: Text(option),
+                    ),
+                  );
+                }).toList()),
+              ],
+            ),
           ),
         ),
       ),

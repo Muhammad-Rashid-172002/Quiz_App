@@ -76,44 +76,47 @@ class _Quiz2State extends State<Quiz2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueAccent,
       appBar: AppBar(
         title: Text('Sports Quiz'),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Container(
-          decoration: BoxDecoration(
-            border: Border(),
-            borderRadius: BorderRadius.circular(10),
-            boxShadow: [
-              BoxShadow(color: Colors.grey, blurRadius: 10, spreadRadius: 5)
-            ],
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Center(
-                child: Text(
-                  questions[currentQuestionIndex]['question'],
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black,
-                      fontSize: 20),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Container(
+            decoration: BoxDecoration(
+              border: Border(),
+              borderRadius: BorderRadius.circular(10),
+              boxShadow: [
+                BoxShadow(color: Colors.grey, blurRadius: 10, spreadRadius: 5)
+              ],
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Center(
+                  child: Text(
+                    questions[currentQuestionIndex]['question'],
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.black,
+                        fontSize: 20),
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              ...List.generate(4, (index) {
-                return Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ElevatedButton(
-                      onPressed: () => checkAnswer(index),
-                      child: Text(
-                          questions[currentQuestionIndex]['options'][index])),
-                );
-              }),
-            ],
+                SizedBox(
+                  height: 20,
+                ),
+                ...List.generate(4, (index) {
+                  return Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ElevatedButton(
+                        onPressed: () => checkAnswer(index),
+                        child: Text(
+                            questions[currentQuestionIndex]['options'][index])),
+                  );
+                }),
+              ],
+            ),
           ),
         ),
       ),

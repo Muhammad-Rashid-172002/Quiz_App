@@ -85,6 +85,7 @@ class _Quiz7State extends State<Quiz7> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueAccent,
       appBar: AppBar(
         title: Text('Geography Quiz'),
       ),

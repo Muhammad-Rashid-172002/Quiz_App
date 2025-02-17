@@ -74,8 +74,9 @@ class _Quiz10State extends State<Quiz10> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blueAccent,
       appBar: AppBar(
-        title: Text('Geography Quiz'),
+        title: Text('Religious Quiz'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
