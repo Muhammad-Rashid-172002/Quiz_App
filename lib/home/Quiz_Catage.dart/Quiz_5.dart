@@ -115,11 +115,17 @@ class _Quiz5State extends State<Quiz5> {
                     .entries
                     .map((option) => Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: ElevatedButton(
-                            onPressed: () {
-                              checkAnswer(option.key);
-                            },
-                            child: Text(option.value),
+                          child: Container(
+                            width: 190,
+                            child: ElevatedButton(
+                              onPressed: () {
+                                checkAnswer(option.key);
+                              },
+                              child: Text(
+                                option.value,
+                                textAlign: TextAlign.center,
+                              ),
+                            ),
                           ),
                         ))
                     .toList()),

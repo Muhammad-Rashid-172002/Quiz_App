@@ -100,14 +100,17 @@ class _Quiz3State extends State<Quiz3> {
                     .map((option) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: ElevatedButton(
-                      onPressed: () {
-                        checkAnswer(
-                          questions[currentQuestionIndex]['options']
-                              .indexOf(option),
-                        );
-                      },
-                      child: Text(option),
+                    child: Container(
+                      width: 190,
+                      child: ElevatedButton(
+                        onPressed: () {
+                          checkAnswer(
+                            questions[currentQuestionIndex]['options']
+                                .indexOf(option),
+                          );
+                        },
+                        child: Text(option),
+                      ),
                     ),
                   );
                 }).toList()),

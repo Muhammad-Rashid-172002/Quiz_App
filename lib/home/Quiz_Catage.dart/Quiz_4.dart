@@ -64,7 +64,7 @@ class _Quiz4State extends State<Quiz4> {
       showDialog(
           context: context,
           builder: (context) => AlertDialog(
-                title: Text('Play Again'),
+                title: Text('Quiz Over'),
                 content: Text('Your score is $score/${questions.length}'),
                 actions: [
                   TextButton(
@@ -76,7 +76,7 @@ class _Quiz4State extends State<Quiz4> {
                           score = 0;
                         });
                       },
-                      child: Text('Quiz Over'))
+                      child: Text('Play Again'))
                 ],
               ));
     }
@@ -112,11 +112,17 @@ class _Quiz4State extends State<Quiz4> {
                   .entries
                   .map((option) => Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: ElevatedButton(
-                          onPressed: () {
-                            checkAnswer(option.key);
-                          },
-                          child: Text(option.value),
+                        child: Container(
+                          width: 190,
+                          child: ElevatedButton(
+                            onPressed: () {
+                              checkAnswer(option.key);
+                            },
+                            child: Text(
+                              option.value,
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
                         ),
                       ))
                   .toList()),

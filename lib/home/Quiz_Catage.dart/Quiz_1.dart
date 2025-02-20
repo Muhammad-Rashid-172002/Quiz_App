@@ -113,10 +113,13 @@ class _Quiz1State extends State<Quiz1> {
                 ...List.generate(4, (index) {
                   return Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: ElevatedButton(
-                        onPressed: () => checkAnswer(index),
-                        child: Text(
-                            questions[currentQuestionIndex]['options'][index])),
+                    child: Container(
+                      width: 190,
+                      child: ElevatedButton(
+                          onPressed: () => checkAnswer(index),
+                          child: Text(questions[currentQuestionIndex]['options']
+                              [index])),
+                    ),
                   );
                 })
               ],

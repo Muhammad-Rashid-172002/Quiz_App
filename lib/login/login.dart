@@ -47,7 +47,7 @@ class _LoginState extends State<Login> {
       } else {
         showSnackBar(
           context,
-          'Please correct Your Information',
+          'Invalid email or password',
           Colors.red,
         );
       }

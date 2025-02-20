@@ -61,7 +61,7 @@ class _Quiz6State extends State<Quiz6> {
       showDialog(
           context: context,
           builder: (context) => AlertDialog(
-                title: Text('Play Again'),
+                title: Text('Quiz Over'),
                 content: Text('Your score is $score/${questions.length}'),
                 actions: [
                   TextButton(
@@ -73,7 +73,7 @@ class _Quiz6State extends State<Quiz6> {
                           score = 0;
                         });
                       },
-                      child: Text('Quiz Over'))
+                      child: Text('Play Again'))
                 ],
               ));
     }
@@ -106,13 +106,19 @@ class _Quiz6State extends State<Quiz6> {
               ...(questions[currentQuestionIndex]['options'] as List<String>)
                   .map((option) => Padding(
                         padding: const EdgeInsets.symmetric(vertical: 10),
-                        child: ElevatedButton(
-                          onPressed: () {
-                            checkAnswer(questions[currentQuestionIndex]
-                                    ['options']
-                                .indexOf(option));
-                          },
-                          child: Text(option),
+                        child: Container(
+                          width: 150,
+                          child: ElevatedButton(
+                            onPressed: () {
+                              checkAnswer(questions[currentQuestionIndex]
+                                      ['options']
+                                  .indexOf(option));
+                            },
+                            child: Text(
+                              option,
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
                         ),
                       ))
             ],

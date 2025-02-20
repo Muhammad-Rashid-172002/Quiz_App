@@ -98,13 +98,19 @@ class _Quiz10State extends State<Quiz10> {
               ...(questions[currentQuestionIndex]['options'] as List<String>)
                   .map((option) => Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: ElevatedButton(
-                            onPressed: () {
-                              checkAnswer(questions[currentQuestionIndex]
-                                      ['options']
-                                  .indexOf(option));
-                            },
-                            child: Text(option)),
+                        child: Container(
+                          width: 190,
+                          child: ElevatedButton(
+                              onPressed: () {
+                                checkAnswer(questions[currentQuestionIndex]
+                                        ['options']
+                                    .indexOf(option));
+                              },
+                              child: Text(
+                                option,
+                                textAlign: TextAlign.center,
+                              )),
+                        ),
                       ))
             ],
           ),
